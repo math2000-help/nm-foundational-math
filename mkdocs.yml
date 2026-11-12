@@ -1,0 +1,73 @@
+site_name: Foundational Math Intensive
+site_description: Nuclear Medicine Foundational Math workshop guide with worked solutions
+# After you publish, put your site address here, for example:
+# site_url: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/
+copyright: TRLC Math Center | Nuclear Medicine Program
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/extra.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Start:
+      - "Start Here: The Setup-Line Method": start-here.md
+      - Constants, Formulas, and Rounding: constants.md
+      - Calculator Check: calculator-check.md
+      - Reading Word Problems: reading-word-problems.md
+  - Topics:
+      - "1. Fractions and Dimensional Analysis": topic-01-dimensional-analysis.md
+      - "2. Scientific Notation": topic-02-scientific-notation.md
+      - "3. Metric Prefixes": topic-03-metric-prefixes.md
+      - "4. Activity Units": topic-04-activity-units.md
+      - "5. Dose Units": topic-05-dose-units.md
+      - "6. Concentration and Volume": topic-06-concentration-volume.md
+      - "7. Weight and BMI": topic-07-weight-bmi.md
+      - "8. Dose Rate and Time": topic-08-dose-rate-time.md
+      - "9. Inverse Square Law": topic-09-inverse-square-law.md
+      - "10. Shielding (HVL)": topic-10-shielding.md
+      - "11. Radioactive Decay": topic-11-radioactive-decay.md
+  - Wrap-up:
+      - Common Checks: final-checks.md
+  - Print the Full Guide: print-full-guide.md

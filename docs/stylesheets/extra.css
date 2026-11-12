@@ -1,0 +1,86 @@
+/* ---- Answers, boxed givens ---- */
+.md-typeset .answer {
+  color: #1e6b3a;
+  font-weight: 700;
+}
+[data-md-color-scheme="slate"] .md-typeset .answer {
+  color: #6fd29a;
+}
+.md-typeset .boxed {
+  border: 1px solid currentColor;
+  padding: 0 0.3em;
+  border-radius: 2px;
+}
+
+/* ---- Red cancel marks (like the printed guide) ----
+   MathJax draws \cancel, \bcancel and \xcancel with these elements. */
+mjx-menclose > mjx-dstrike,
+mjx-menclose > mjx-ustrike,
+mjx-menclose > mjx-hstrike,
+mjx-menclose > mjx-vstrike {
+  border-color: #d62828 !important;
+  border-top-width: 0.09em !important;
+}
+
+/* Long equations scroll sideways instead of running off the screen. */
+.md-typeset div.arithmatex {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.md-typeset kbd {
+  font-size: 0.85em;
+}
+
+.print-button {
+  float: right;
+  margin: 0 0 0.5rem 1rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+/* ---- Printing / Save as PDF ---- */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-tabs,
+  .md-top,
+  .md-search,
+  .md-source-file,
+  .print-button,
+  .no-print,
+  .headerlink {
+    display: none !important;
+  }
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+  .md-typeset {
+    font-size: 11pt;
+  }
+  .md-typeset details,
+  .md-typeset .admonition {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+  .md-typeset h1 {
+    break-before: page;
+  }
+  .md-typeset h1:first-of-type {
+    break-before: auto;
+  }
+  .md-typeset h2,
+  .md-typeset h3 {
+    break-after: avoid;
+  }
+  /* keep colors (admonition headers, red cancel marks) in the PDF */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
