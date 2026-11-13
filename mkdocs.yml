@@ -2,7 +2,6 @@ site_name: Foundational Math Intensive
 site_description: Nuclear Medicine Foundational Math workshop guide with worked solutions
 # After you publish, put your site address here, for example:
 # site_url: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/
-copyright: TRLC Math Center | Nuclear Medicine Program
 
 theme:
   name: material
